@@ -3,34 +3,34 @@ name: codex-bunbun-wallpaper
 description: Apply or repair this purple Bunbun image wallpaper inside Codex Desktop on Windows, including persistence and text readability. Use for this specific in-app theme, not Windows wallpaper or ChatGPT Pets.
 ---
 
-# Codex ��ɫ�����ֽ
+# Purple Bunbun wallpaper for Codex Desktop
 
-�� `assets/purple-bunbun-wallpaper.png` ��Ϊ Codex Desktop **Ӧ���ڲ�**�ĳ�פ�����������ֱ��⡢���ڰ�ť����Ϣ���༭��������ɶ����� Skill ��¼���� 2026 �� 10 ���� Windows Store/MSIX �� Codex ����֤����������������ͬ�汾�� DOM ��������ʽ��Ҫ���¼�顣
+Apply `assets/purple-bunbun-wallpaper.png` as a persistent image background **inside Codex Desktop**. The user wants the character visible, with readable text and controls. A plain purple color does not fulfill this request.
 
-## �����߽�
+## Scope and preparation
 
-- ��ȷ���û�Ҫ���� Codex �ڲ�ͼƬ����������ɫ���⡢Windows �����ֽ�� ChatGPT Pets ��������ɡ�
-- ʹ���Ѱ�װ���������� HeiGe Codex Skin Studio ��Ϊ�������档��û�������Ȳ�����Դ�����ɡ���װ�ű���Ķ����ļ��� CDP ���ʷ�ʽ���ٰ�װ����Ҫֱ������δ֪��װ��ж�ؽű���
-- �޸���������ǰ���������� JSON��ͼƬ�ͱ��޸ĵ� CSS �ļ���������Ҫ���Ʊ��ֿ�����ĸ������졢ƾ�ݡ���ͼ������û�·���������
-- CDP �˿ڽ����ڵ�ǰ�û�������Ϻ�Ӧ�����⣻������������֤�߽硣��ɺ󱨸����Ƿ����ڼ�����
+- Confirm the target is the Codex app interface, not Windows wallpaper or ChatGPT Pets.
+- Inspect the current Codex installation, existing theme, HeiGe Codex Skin Studio installation, and persistence mechanism before changing them. Do not reinstall Codex just to apply the wallpaper.
+- Use HeiGe only after reviewing its source, installer side effects, and local CDP connection method. Its CDP endpoint is unauthenticated within the local user session; keep it local and close it when no longer needed.
+- Back up the active theme JSON, wallpaper, and CSS before editing. Keep credentials, conversation content, local personal paths, and screenshots out of any published repository.
 
-## Ӧ������
+## Apply the image
 
-1. ��鵱ǰ Codex ��װ��HeiGe �汾����������ͳ�פ״̬�����ȸ����û������õ����⣻��Ҫ�ظ���װ Codex��
-2. �� HeiGe �� `create --image` �������⣬ͼƬ�ñ� Skill �� `assets/purple-bunbun-wallpaper.png`����ɫʹ��ǳ�ϱ��� `#f5edfa`���������� `#30233e`����ɫ `#aa75dc`����ɫ `#ddc4ef`����Ӧ��ǰ������ɵ����� JSON ��ͼƬ·����
-3. �� HeiGe ֧�ֵ� Windows Ӧ����ڼ������⡣���� Store/MSIX �棬�Ⱥ˶���ʵ������·����CDP �˿ں����⻯������洢·������Ҫ���贫ͳ��װ·�����á�ֻ���û�Ҫ���Ժ����������ͼ��ʱ�����ó�פ��
-4. ����Ӧ�óɹ��ķ���ֵֻ�ǳ���֤�ݡ���� Codex ��ʵ���ں� `#root` �ļ�����ʽ������������ͼƬ�������ڽ����ڿɼ����ؿ����ټ�鳣פ��
+1. Use the installed HeiGe tool's image-theme creation flow with this Skill's `assets/purple-bunbun-wallpaper.png`. Suggested palette: pale purple surface `#f5edfa`, dark text `#30233e`, accent `#aa75dc`, and border `#ddc4ef`.
+2. Apply the generated theme to the verified Codex Desktop window. For Windows Store/MSIX installations, inspect the real executable path, CDP port, theme storage path, and persistence setup instead of assuming a conventional install location.
+3. If the user wants the theme to survive restart, configure and verify the HeiGe persistence task. Record what launches it, when it runs, and how to pause or remove it.
+4. Check the actual Codex window and computed styles at `#root`. A successful injection response alone does not prove the image is visible. If the app falls back to a solid color, inspect the background URL, stacking order, and whether a `color-mix()` or data-URL combination was discarded.
 
-## �ɶ��ԺͲ���
+## Readability and responsive layout
 
-�����Ķ� [Windows �����޸�](references/windows-layout.md)���òο��������ζԻ����޸������Ĵ����⣺�������ڰ�ť�������������������ĵײ��������༭�ѷ�����Ϣʱ��������ȼ��Ŀ��Ԫ�ص� DOM �ͼ�����ʽ��ѡ������ƥ��ʱ����ǰ�汾��������Ҫä������ CSS��
+Read [Windows layout fixes](references/windows-layout.md). They cover the top bar and window controls, the composer fade when the left sidebar collapses, and the edit form for an already sent message. Inspect the live DOM and computed styles before applying selectors: Codex class names and layout can change between releases.
 
-## ����
+## Acceptance checks
 
-- ��ͼȷ������ͼƬ�Կɼ���������ť�ͱ����ܶ��壬��������ͨ��Ϣû�б�����ɫ���ǡ�
-- �ֱ������չ��������״̬���ײ�����Ӧ�������ݿ��ȡ�
-- �򿪡��༭��Ϣ����ȷ��������������֡���ꡢȡ���ͷ��Ͱ�ť�����ȡ���༭�����޸�ԭ��Ϣ��
-- �������־û���ʵ����������״̬���Լ�һ�����´� Codex ��Ŀɼ������ʧ��ʱ˵��ͣ�ڴ�����ע�롢���ֻ��ǳ�פ���ڡ�
+- The Bunbun image is clearly visible inside Codex; title text, window controls, normal messages, and the composer remain readable.
+- With the sidebar both open and collapsed, the bottom fade tracks the composer/content width and does not leave a large rectangular block.
+- In edit-message mode, typed text, caret, Cancel, and Send remain easy to see. Do not alter the original message content.
+- Verify persistence from the actual task or launcher state and by reopening Codex once when feasible. Report separately what was applied, what is visible now, and what remains unverified.
 
-�� Skill �����������������ߣ�������Դ�����װ�����´��Ϊ�Լ�����Ʒ��
+This Skill documents a workflow; it does not contain the HeiGe source code or installer.
 
