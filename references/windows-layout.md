@@ -69,4 +69,3 @@ The normal message bubble may have a pale surface while its edit form remains tr
 ```
 
 The observed computed style after the fix had a 92% pale-purple surface, `blur(10px)`, and dark text near `rgb(48, 35, 62)`. Open an actual edit form in the current Codex version to confirm.
-
