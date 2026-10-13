@@ -1,14 +1,14 @@
-# Windows Codex �����޸���¼
+# Windows Codex layout fixes
 
-���� CSS ���� 2026-10-13 �� Windows Store/MSIX Codex ʵ�⡣HeiGe ���� CSS ��λ�ü� Codex ������������汾�仯�����õ�ǰҳ�� DOM��������ʽ�ͽ�ͼ��λ���ٰ���Ҫ�Ĺ���������� CSS���޸ĺ�����Ӧ�����⡣
+These selectors were observed in a Windows Store/MSIX Codex build on 2026-10-13. Inspect the current DOM, computed styles, and screenshot before reusing them. Apply only selectors that still match, then visually verify the result.
 
-## ����ͼ
+## Keep the image visible
 
-����ͼ������ͼƬ���������� `#root`����� Chromium �ᶪ������ data URL + `color-mix()` ���䡱��ϳɵ����� `background` ����������ͼƬ��ʹ�õ����� `background: url(...) right center / cover no-repeat`��͸���Ķ�����ھ���ؼ��ϣ����ѽ�ͬһ������������
+If the generated background disappears, check the computed background at `#root`. Chromium may discard a combined declaration that mixes a data URL with `color-mix()`. Prefer a plain `background: url(...) right center / cover no-repeat` declaration and put translucent overlays on the relevant child surfaces.
 
-## ������ť�������
+## Separate the top bar and clarify window controls
 
-��ȷ����Щ�����Զ�Ӧ���ڶ�����ҳ����⡣ǳ�ϵ׺�ģ�������Ͻǰ�ť����ǰ����������ǿշֿ���
+A pale translucent surface and border make title text and upper-right controls readable against a busy sky.
 
 ```css
 [class*="_ApplicationMenuTopBar_"] {
@@ -29,9 +29,9 @@ header[class*="_ApplicationMenuPageHeader_"] {
 }
 ```
 
-## ���������ĵײ�����
+## Make the composer fade follow the content width
 
-�ײ���������ռ�����ڣ�����խ������������������Ӳ�׿顣��׼ composer ����������Ԫ�غ󣬽������Ƶ��������ݿ��Ȳ��ữ���ࡣ
+When the left sidebar collapses, a page-wide white rectangle behind the composer looks abrupt. After identifying the actual composer and overlay nodes, constrain only the fade overlay to the content width and soften its edges.
 
 ```css
 [class*="thread-composer-bottom-inset"] > [class*="-top-8"][class*="z-0"] {
@@ -49,9 +49,9 @@ header[class*="_ApplicationMenuPageHeader_"] {
 }
 ```
 
-## �༭�ѷ�����Ϣ
+## Make editing a sent message readable
 
-��ͨ��Ϣ������ǳɫ�ף����༭״̬������һ������͸���� `form`����ɫ��ѹ���ǿ��ϡ�ֻ����Ϣ�༭�������Ķ��㣬������ס���ζԻ���
+The normal message bubble may have a pale surface while its edit form remains translucent. Scope the background to the form and its editable textbox so the text and caret remain visible without covering neighboring messages.
 
 ```css
 [class*="group/user-message"] form:has([role="textbox"][contenteditable="true"]) {
@@ -68,5 +68,5 @@ header[class*="_ApplicationMenuPageHeader_"] {
 }
 ```
 
-���Ӧ�ú�ļ�����ʽΪ 92% ǳ�ϱ�����`blur(10px)`������ `rgb(48, 35, 62)`������һ�� Codex �汾�У�����ʵ�ʴ򿪱༭��Ŀ�����ա�
+The observed computed style after the fix had a 92% pale-purple surface, `blur(10px)`, and dark text near `rgb(48, 35, 62)`. Open an actual edit form in the current Codex version to confirm.
 
