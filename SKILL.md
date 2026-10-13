@@ -1,6 +1,6 @@
 ---
 name: codex-bunbun-wallpaper
-description: Check Codex Desktop's native image-background support, create or apply a user-chosen Bunbun wallpaper, and repair persistence, blur, layout, and text readability on Windows. Use for this in-app wallpaper workflow, not Windows wallpaper or ChatGPT Pets.
+description: Check Codex Desktop's native image-background support, create, apply, or freely switch supported image wallpapers through the theme center, and repair persistence, blur, layout, and text readability on Windows. Use for this in-app wallpaper workflow, not Windows wallpaper or ChatGPT Pets.
 ---
 
 # Purple Bunbun wallpaper for Codex Desktop
@@ -18,6 +18,10 @@ Create or apply a persistent image background **inside Codex Desktop**. The bund
 ## Choose or create the image
 
 If the user wants a new subject, palette, or composition, follow [wallpaper design](references/wallpaper-design.md). Use an available image-generation capability to create the requested wallpaper, inspect it, and use the approved result. Otherwise use the bundled image or a user-provided image. Do not silently substitute a solid color or claim that a generated illustration is an official game asset.
+
+## Switch wallpapers in the theme center
+
+The user may replace the visible wallpaper whenever they want. Follow [switching wallpapers](references/switch-wallpaper.md) for HeiGe's **主题 → ＋ 自定义图片** flow. A new upload becomes a selectable custom theme; it does not necessarily edit the bundled Bunbun theme in place or preserve its palette and readability fixes. Recheck the new theme's layout and contrast. If the panel says **仅本机快捷・未写入启动器**, treat the image as session/local only until launcher persistence is verified.
 
 ## Apply the image
 

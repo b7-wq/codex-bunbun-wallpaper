@@ -6,6 +6,7 @@ A purple Bunbun image wallpaper **inside Codex Desktop for Windows**, packaged a
 
 - Checks the installed Codex version and its actual Appearance controls for native image-background support. It tests image rendering and restart persistence when that control exists; absence is reported for that build only.
 - Uses the included image, a user-provided image, or an image generated from the user's description when an image-generation tool is available.
+- Lets you choose another supported local image in HeiGe's theme center and switch between custom image themes. Each switch is checked for readability and restart persistence.
 - Applies the image through a native setting when available, or through a separately reviewed HeiGe installation. It verifies the visible result and persistence.
 - Audits the top bar, message text, composer, edit form, dialogs, and narrower layouts. It adds translucent blur and stronger text contrast only where the wallpaper makes content hard to read.
 
@@ -14,6 +15,16 @@ A purple Bunbun image wallpaper **inside Codex Desktop for Windows**, packaged a
 ![Purple Bunbun wallpaper running in Codex Desktop](assets/demo-codex-bunbun.png)
 
 *Screenshot from Codex Desktop on Windows. Conversation titles in the sidebar are blurred.*
+
+## Change the wallpaper / 更换壁纸
+
+**可以在主题里任意换壁纸。** Open **主题 → ＋ 自定义图片**, choose a supported local PNG, JPG/JPEG, or WebP image, and select the new custom theme. You can switch images without recreating the bundled Bunbun artwork. A new image may change the theme palette, so check the text and blur overlays again. See the [switching guide](references/switch-wallpaper.md).
+
+![HeiGe theme center with the custom-image option](assets/theme-center-custom-image.png)
+
+![A different image wallpaper applied inside Codex Desktop](assets/custom-wallpaper-example.png)
+
+The first screenshot shows **仅本机快捷・未写入启动器**. It demonstrates image switching, while restart persistence still needs separate verification. The second screenshot shows the image visibly applied; the pictured game artwork is an example screenshot, not a wallpaper asset bundled by this repository.
 
 ## Use
 
