@@ -9,4 +9,3 @@ The Skill uses the separately installed [HeiGe Codex Skin Studio](https://github
 Install this repository as a Codex Skill, or copy `SKILL.md`, `references/`, and `assets/` into a `codex-bunbun-wallpaper` directory under your Codex skills folder. Then ask Codex to apply the purple Bunbun wallpaper. The included image is at `assets/purple-bunbun-wallpaper.png`.
 
 This is an unofficial customization. It relies on the current Codex Desktop page structure and can need adjustment after app updates. The image is a custom generated illustration from this conversation, not an official game asset.
-
