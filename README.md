@@ -1,12 +1,12 @@
-# Codex ��ɫ�����ֽ Skill
+# Codex purple Bunbun wallpaper
 
-��� Skill ����ɫ����ͼƬ��Ϊ **Codex Desktop Ӧ����**��������ָ���޸��������������������Ϣ�༭��Ŀɶ��ԡ���ǰ��¼���� Windows Store/MSIX �� Codex ������� HeiGe Codex Skin Studio�������� HeiGe ��Դ�����װ����
+This repository contains a reusable Codex Skill for applying a **purple Bunbun image background inside Codex Desktop** on Windows. It also records the readability and layout fixes developed in this conversation: a clearer title bar, a composer fade that follows the content width when the sidebar collapses, and a readable sent-message editor.
 
-## ʹ��
+The Skill uses the separately installed [HeiGe Codex Skin Studio](https://github.com/search?q=HeiGe+Codex+Skin+Studio&type=repositories) as its theme engine. This repository does not bundle or claim ownership of that tool. Review its source and installer before using it.
 
-�Ѳֿ��¡�� Codex �� skills Ŀ¼����ͨ�� Codex �� skill ��װ���ܴӱ��ֿⰲװ�����˵������ `codex-bunbun-wallpaper` �� Codex �������򱳾������ֳ�פ����
+## Use
 
-�״�ִ����Ҫ��� HeiGe ����Դ�밲װ��ʽ��Skill �ڵ�ͼƬ�� `assets/purple-bunbun-wallpaper.png`���������̼� `SKILL.md`������ͼ�Ǳ��ζԻ����ɵ�������ͼƬ��������Ϸ�ٷ��زġ�
+Install this repository as a Codex Skill, or copy `SKILL.md`, `references/`, and `assets/` into a `codex-bunbun-wallpaper` directory under your Codex skills folder. Then ask Codex to apply the purple Bunbun wallpaper. The included image is at `assets/purple-bunbun-wallpaper.png`.
 
-����ѡ������¼�� 2026-10-13��Codex ���º�Ӧ���¼�飬�����ǰѾ�ѡ���������ȶ��ӿڡ�
+This is an unofficial customization. It relies on the current Codex Desktop page structure and can need adjustment after app updates. The image is a custom generated illustration from this conversation, not an official game asset.
 
