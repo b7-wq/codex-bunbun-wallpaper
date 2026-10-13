@@ -33,4 +33,3 @@ Read [Windows layout fixes](references/windows-layout.md). They cover the top ba
 - Verify persistence from the actual task or launcher state and by reopening Codex once when feasible. Report separately what was applied, what is visible now, and what remains unverified.
 
 This Skill documents a workflow; it does not contain the HeiGe source code or installer.
-
