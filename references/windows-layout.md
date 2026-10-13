@@ -2,6 +2,12 @@
 
 These selectors were observed in a Windows Store/MSIX Codex build on 2026-10-13. Inspect the current DOM, computed styles, and screenshot before reusing them. Apply only selectors that still match, then visually verify the result.
 
+## Audit every place the wallpaper affects readability
+
+Capture the home screen, a normal conversation, and the edit form with the sidebar both expanded and collapsed. Repeat at a narrower window width. For each screenshot, identify text, icons, or controls that blend into the image, including title bar buttons, header text, message timestamps, links, the composer, and dialogs. Check the actual rendered result and click targets, not only whether CSS injected successfully.
+
+For a problem area, select its smallest stable DOM container and add a semi-transparent surface, localized `backdrop-filter: blur(...)`, and a border or shadow when needed. Set explicit foreground and caret colors on text inputs. Tune surface opacity and text contrast together: blur alone cannot guarantee legibility. Keep the wallpaper itself sharp outside the affected container and avoid broad rules that cover the whole page or block pointer events. After each change, confirm text remains legible, controls remain usable, the image still reads as an image, and expanded/collapsed layout stays aligned. Treat the snippets below as build-specific examples, not selectors to paste blindly.
+
 ## Keep the image visible
 
 If the generated background disappears, check the computed background at `#root`. Chromium may discard a combined declaration that mixes a data URL with `color-mix()`. Prefer a plain `background: url(...) right center / cover no-repeat` declaration and put translucent overlays on the relevant child surfaces.
