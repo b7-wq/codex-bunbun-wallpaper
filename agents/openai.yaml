@@ -1,0 +1,4 @@
+interface:
+  display_name: "主题壁纸 Skill"
+  short_description: "为 Codex 桌面端生成、更换和修复图片壁纸主题"
+  default_prompt: "使用 $codex-theme-wallpaper 为 Codex 设置我想要的图片壁纸，并检查文字可读性。"

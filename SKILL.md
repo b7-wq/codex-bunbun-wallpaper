@@ -1,11 +1,11 @@
 ---
-name: codex-bunbun-wallpaper
-description: Check Codex Desktop's native image-background support, create, apply, or freely switch supported image wallpapers through the theme center, and repair persistence, blur, layout, and text readability on Windows. Use for this in-app wallpaper workflow, not Windows wallpaper or ChatGPT Pets.
+name: codex-theme-wallpaper
+description: Create, apply, switch, and repair image wallpaper themes inside Codex Desktop on Windows. Check native background support and verify persistence, blur, layout, and text readability. Use for Codex in-app themes, not Windows wallpaper or ChatGPT Pets.
 ---
 
-# Purple Bunbun wallpaper for Codex Desktop
+# Codex theme wallpaper
 
-Create or apply a persistent image background **inside Codex Desktop**. The bundled `assets/purple-bunbun-wallpaper.png` is the default example; a user can request a different image. The character must remain visible and text and controls readable. A plain purple color does not fulfill an image-wallpaper request.
+Create or apply a persistent image background **inside Codex Desktop**. The bundled `assets/purple-bunbun-wallpaper.png` is one example; the user can choose or create any supported image. The requested subject must remain visible and text and controls readable. A plain color does not fulfill an image-wallpaper request.
 
 ## Scope and preparation
 

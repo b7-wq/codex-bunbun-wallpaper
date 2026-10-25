@@ -1,6 +1,6 @@
-# Codex purple Bunbun wallpaper
+# Codex 主题壁纸 Skill · Codex Theme Wallpaper
 
-A purple Bunbun image wallpaper **inside Codex Desktop for Windows**, packaged as a reusable Codex Skill. It checks whether the installed Codex build can set an image background natively, can guide generation of a different requested image, and repairs readability with local blur and contrast adjustments.
+A reusable Skill for image wallpaper themes **inside Codex Desktop for Windows**. The purple Bunbun image is the included example; you can choose or generate other wallpapers. The Skill checks whether the installed Codex build can set an image background natively and repairs readability with local blur and contrast adjustments.
 
 ## What the Skill does
 
@@ -28,12 +28,12 @@ The first screenshot shows **仅本机快捷・未写入启动器**. It demonstr
 
 ## Use
 
-Install this repository as a Codex Skill, or copy `SKILL.md`, `references/`, and `assets/` into a `codex-bunbun-wallpaper` folder under your Codex skills directory. Then ask Codex to apply the purple Bunbun wallpaper, or describe a new image to create and apply. The original wallpaper image is [included here](assets/purple-bunbun-wallpaper.png).
+Install this repository as a Codex Skill, or copy `SKILL.md`, `agents/`, `references/`, and `assets/` into a `codex-theme-wallpaper` folder under your Codex skills directory. Invoke `$codex-theme-wallpaper` to apply the included purple Bunbun wallpaper or describe a new image to create and apply. The Bunbun wallpaper image is [included here](assets/purple-bunbun-wallpaper.png).
 
 The Skill uses the separately installed HeiGe Codex Skin Studio as its theme engine. This repository does not bundle or claim ownership of that tool. Review its source and installer before using it.
 
 ## Search terms / 搜索关键词
 
-Codex Desktop wallpaper · Codex theme · Codex skin · Codex Skill · purple Bunbun wallpaper · purple rabbit theme · Windows Codex customization · Codex 壁纸 · Codex 主题 · 紫色兔球 · 兔球球背景
+Codex Desktop wallpaper · Codex theme wallpaper · Codex skin · Codex Skill · custom image wallpaper · purple Bunbun wallpaper · purple rabbit theme · Windows Codex customization · Codex 主题壁纸 Skill · Codex 壁纸 · Codex 主题 · 紫色兔球 · 兔球球背景
 
 This is an unofficial customization. It relies on the current Codex Desktop page structure and may need adjustment after app updates. The wallpaper is a custom generated illustration from this conversation, not an official game asset.
